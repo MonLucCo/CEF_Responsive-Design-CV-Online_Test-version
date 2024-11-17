@@ -1,16 +1,33 @@
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import LegalNotice from './pages/LegalNotice';
+import NotFound from './pages/NotFound';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+const App = () => {
   return (
-    <div className="App">
-      <h1> Bienvenue dans le projet CV Online de John Doe !</h1>
-      <p><i className="fas fa-check-circle"></i> Icône Font-Awesome (version 6) avec le CDN de cdnjs</p>
-      <div class="container">
-        <article class="col-md-6 col-lg-4 mb-5">
-          <p>Framework Bootstrap (version 5.3.3) avec le CDN de jsDelivr</p>
-          <button className="btn btn-primary">Bouton Bootstrap !</button>
-        </article>
-      </div>
-    </div>
+    <Router>
+      <Header />
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/legal-notice" element={<LegalNotice />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;
