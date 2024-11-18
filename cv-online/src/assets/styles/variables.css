@@ -1,0 +1,12 @@
+:root {
+    /* Couleur de fond */
+    --background-color: #EEE;
+    /* Couleur du texte */
+    --text-color: #444;
+    /* Couleur des titres */
+    --title-color: #1e1e1e;
+    /* Couleur des balises <strong> */
+    --highlight-color: #000000;
+    /* Couleur primaire */
+    --primary-color: #0d6efd;
+}
