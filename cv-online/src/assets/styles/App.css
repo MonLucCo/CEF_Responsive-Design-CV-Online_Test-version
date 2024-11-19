@@ -1,5 +1,5 @@
 body {
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     color: var(--text-color);
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -20,4 +20,9 @@ strong {
 
 .btn-primary {
     background-color: var(--primary-color);
+}
+
+.main-content {
+    /* Le padding-top sera défini dynamiquement par JavaScript */
+    padding-top: 0;
 }
