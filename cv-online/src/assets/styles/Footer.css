@@ -1,0 +1,42 @@
+.footer {
+    background-color: var(--background-color);
+}
+
+.footer .fab {
+    /* Augmenter la taille des icônes */
+    font-size: 1.8rem;
+    /* Couleur sombre pour les icônes */
+    color: var(--text-color);
+}
+
+.footer .fab:hover {
+    color: var(--link-hover--light);
+}
+
+.custom-list li::before {
+    content: "> ";
+    /* Utiliser la couleur primaire */
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+.custom-link {
+    /* Utiliser la couleur des titres */
+    color: var(--titre-color);
+    /* Pas de souligné sur les liens */
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    /* Souligner les liens au survol */
+    text-decoration: underline;
+}
+
+.scroll-top {
+    background-color: var(--backgroung-color--btn-scroll-top);
+}
+
+.scroll-top:hover {
+    background-color: var(--link-hover);
+    color: var(--text-color);
+}
