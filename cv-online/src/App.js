@@ -23,12 +23,14 @@ const Main = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Sélection des éléments du DOM nécessaires
     const scrollTopButton = document.querySelector('.scroll-top');
     const mainContent = document.querySelector('.main-content');
     const header = document.querySelector('header');
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Fonction pour afficher ou masquer le bouton de retour en haut en fonction du défilement
     const handleScroll = () => {
       if (window.scrollY > 100) {
         scrollTopButton.classList.remove('d-none');
@@ -37,11 +39,13 @@ const Main = () => {
       }
     };
 
+    // Fonction pour ajuster le padding-top du contenu principal en fonction de la hauteur de l'en-tête
     const setPaddingTop = () => {
       const headerHeight = header.offsetHeight;
       mainContent.style.paddingTop = `${headerHeight}px`;
     };
 
+    // Fonction pour fermer la barre de navigation lors du clic sur un lien de navigation
     const closeNavbar = (event) => {
       const navbarCollapse = document.querySelector('.navbar-collapse');
       const targetPath = event.currentTarget.getAttribute('href');
@@ -53,6 +57,7 @@ const Main = () => {
       }
     };
 
+    // Ajout des écouteurs d'événements
     document.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', setPaddingTop);
 
@@ -60,18 +65,21 @@ const Main = () => {
       link.addEventListener('click', closeNavbar);
     });
 
+    // Initialisation du padding-top
     setPaddingTop();
 
+    // Ajout de l'écouteur d'événement pour le bouton de retour en haut
     scrollTopButton.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // Nettoyage des écouteurs d'événements lors du démontage du composant
     return () => {
       document.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', setPaddingTop);
       navLinks.forEach(link => { link.removeEventListener('click', closeNavbar); });
     };
-  }, []);
+  }, [location.pathname]); // Ajout de location.pathname comme dépendance
 
   return (
     <>

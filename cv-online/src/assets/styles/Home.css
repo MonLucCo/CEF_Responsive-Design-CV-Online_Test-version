@@ -1,0 +1,64 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    /* Centrer l'image de fond */
+}
+
+/* Changer la couleur des titres pour l'ergonomie visuelle */
+.hero-section h1,
+.hero-section h2 {
+    color: white;
+}
+
+/* Surcouche sombre pour noircir l'image de fond */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Permettre les clics à travers la couche */
+    pointer-events: none;
+}
+
+/* Colorisation de la séparation */
+.about-section hr {
+    border-top: 2px solid var(--primary-color);
+}
+
+
+/* Image de fond pour les mobiles */
+@media only screen {
+    .hero-section {
+        background-image: url('../images/home/hero-bg-mobile.jpg');
+    }
+
+    :root {
+        --offset-scroll: 2rem;
+    }
+}
+
+/* Image de fond pour les tablettes */
+@media only screen and (min-width: 768px) {
+    .hero-section {
+        background-image: url('../images/home/hero-bg-tablette.jpg');
+    }
+
+    :root {
+        --offset-scroll: 3rem;
+    }
+}
+
+/* Image de fond pour les desktops */
+@media only screen and (min-width: 992px) {
+    .hero-section {
+        background-image: url('../images/home/hero-bg.jpg');
+    }
+
+    :root {
+        --offset-scroll: 4rem;
+    }
+}
