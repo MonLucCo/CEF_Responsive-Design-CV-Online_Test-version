@@ -7,7 +7,7 @@ import Skills from '../components/Skills';
 import johnDoeAbout from '../assets/images/home/john-doe-about.jpg';
 
 // Importation des styles
-import '../assets/styles/Home.css';
+import '../assets/styles/pages/Home.scss';
 
 const Home = () => {
     // Tableau des compétences avec les niveaux et les couleurs Bootstrap correspondantes
