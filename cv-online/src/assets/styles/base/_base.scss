@@ -1,0 +1,40 @@
+// _base.scss
+// Contient les styles de base et les reset CSS
+
+// Importation des variables personnalisées
+@import '../base/variables';
+
+// Styles globaux pour le corps du document
+body {
+    /* Définir la couleur de fond du corps du document */
+    /* background-color: var(--background-color); */
+    color: $text-color; // Définir la couleur du texte
+    font-family: 'Nunito Sans', sans-serif; // Définir la police de caractères
+}
+
+// Styles pour les titres
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $title-color; // Définir la couleur des titres
+}
+
+// Styles pour les éléments en gras
+strong {
+    font-weight: 600; // Définir le poids de la police pour les éléments en gras
+    color: $highlight-color; // Définir la couleur des éléments en gras
+}
+
+// Styles pour les boutons primaires
+.btn-primary {
+    background-color: $primary-color; // Définir la couleur de fond des boutons primaires
+}
+
+// Styles pour le contenu principal
+.main-content {
+    /* Le padding-top sera défini dynamiquement par JavaScript */
+    padding-top: 0; // Initialiser le padding-top à 0
+}

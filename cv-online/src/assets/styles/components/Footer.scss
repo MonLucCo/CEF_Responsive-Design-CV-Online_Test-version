@@ -1,0 +1,49 @@
+// Footer.scss
+
+// Importation des variables personnalisées
+@import '../base/variables';
+
+// Styles pour le pied de page
+.footer {
+    background-color: $background-color; // Définir la couleur de fond du pied de page
+
+    .fab {
+        font-size: 1.8rem; // Augmenter la taille des icônes
+        color: $text-color; // Définir la couleur des icônes
+
+        &:hover {
+            color: $link-hover-light; // Changer la couleur des icônes au survol
+        }
+    }
+}
+
+// Styles pour la liste personnalisée
+.custom-list {
+    li {
+        &::before {
+            content: "> "; // Ajouter une puce avant chaque élément de la liste
+            color: $primary-color; // Utiliser la couleur primaire pour les puces
+            margin-right: 5px; // Ajouter un espacement entre la puce et le texte
+        }
+    }
+}
+
+// Styles pour les liens personnalisés
+.custom-link {
+    color: $title-color; // Utiliser la couleur des titres pour les liens
+    text-decoration: none; // Supprimer le soulignement des liens
+
+    &:hover {
+        text-decoration: underline; // Ajouter un soulignement au survol des liens
+    }
+}
+
+// Styles pour le bouton de retour en haut
+.scroll-top {
+    background-color: $background-color--btn-scroll-top; // Définir la couleur de fond du bouton
+
+    &:hover {
+        background-color: $link-hover; // Changer la couleur de fond au survol
+        color: $text-color; // Changer la couleur du texte au survol
+    }
+}
