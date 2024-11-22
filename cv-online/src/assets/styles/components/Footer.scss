@@ -1,7 +1,7 @@
 // Footer.scss
 
 // Importation des variables personnalisées
-@import '../base/variables';
+@use '../base/index' as *;
 
 // Styles pour le pied de page
 .footer {
