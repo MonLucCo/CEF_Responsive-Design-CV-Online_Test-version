@@ -1,7 +1,7 @@
 // Home.scss
 
 // Importation des variables personnalisées
-@import '../base/variables';
+@use '../base/index' as *;
 
 // Section Héro
 .hero-section {
@@ -9,6 +9,7 @@
     height: 100vh; // Hauteur de la section égale à la hauteur de la fenêtre
     background-size: cover; // Couvrir toute la section avec l'image de fond
     background-position: center center; // Centrer l'image de fond
+    background-image: url('../../images/home/hero-bg-mobile.jpg');
 
     h1,
     h2 {
@@ -16,50 +17,42 @@
     }
 
     .overlay {
-        background-color: rgba(0, 0, 0, 0.3); // Surcouche sombre pour noircir l'image de fond
+        background-color: $overlay-color; // Surcouche sombre pour noircir l'image de fond
         position: absolute; // Positionnement absolu pour couvrir toute la section
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none; // Permettre les clics à travers la surcouche
-    }
-}
-
-// Section À Propos
-.about-section {
-    hr {
-        border-top: 2px solid $primary-color; // Colorisation de la séparation
+        width: 100%;
+        height: 100%;
     }
 }
 
 // Media Queries pour les Images de Fond et les Offsets
-@media only screen and (min-width: 0) {
-    .hero-section {
-        background-image: url('../../images/home/hero-bg-mobile.jpg'); // Image de fond pour les mobiles
-    }
+// @media only screen and (min-width: 0) {
+//     .hero-section {
+//         background-image: url('../../images/home/hero-bg-mobile.jpg'); // Image de fond pour les mobiles
+//     }
 
-    :root {
-        --offset-scroll: 2rem; // Définir l'offset pour les mobiles
-    }
-}
+//     .home-page {
+//         margin-top: 56px; // Pour éviter le masquage dû à la barre de navigation
+//     }
+// }
 
-@media only screen and (min-width: 768px) {
-    .hero-section {
-        background-image: url('../../images/home/hero-bg-tablette.jpg'); // Image de fond pour les tablettes
-    }
+// @media only screen and (min-width: 768px) {
+//     .hero-section {
+//         background-image: url('../../images/home/hero-bg-tablette.jpg'); // Image de fond pour les tablettes
+//     }
 
-    :root {
-        --offset-scroll: 3rem; // Définir l'offset pour les tablettes
-    }
-}
+//     .home-page {
+//         margin-top: 56px; // Pour éviter le masquage dû à la barre de navigation
+//     }
+// }
 
-@media only screen and (min-width: 992px) {
-    .hero-section {
-        background-image: url('../../images/home/hero-bg.jpg'); // Image de fond pour les desktops
-    }
+// @media only screen and (min-width: 992px) {
+//     .hero-section {
+//         background-image: url('../../images/home/hero-bg.jpg'); // Image de fond pour les desktops
+//     }
 
-    :root {
-        --offset-scroll: 4rem; // Définir l'offset pour les desktops
-    }
-}
+//     .home-page {
+//         margin-top: 72px; // Pour éviter le masquage dû à la barre de navigation
+//     }
+// }

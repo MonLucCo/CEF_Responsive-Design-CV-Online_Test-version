@@ -2,7 +2,7 @@
 // Contient les styles de base et les reset CSS
 
 // Importation des variables personnalisées
-@import '../base/variables';
+@use '../base/index' as *;
 
 // Styles globaux pour le corps du document
 body {
@@ -31,10 +31,4 @@ strong {
 // Styles pour les boutons primaires
 .btn-primary {
     background-color: $primary-color; // Définir la couleur de fond des boutons primaires
-}
-
-// Styles pour le contenu principal
-.main-content {
-    /* Le padding-top sera défini dynamiquement par JavaScript */
-    padding-top: 0; // Initialiser le padding-top à 0
 }

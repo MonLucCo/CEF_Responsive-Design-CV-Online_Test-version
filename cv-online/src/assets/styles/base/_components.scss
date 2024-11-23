@@ -1,2 +1,15 @@
 // _components.scss
-// Contient les styles spécifiques aux comosants
+// Contient les styles spécifiques aux composants
+
+// Media Queries pour positionner le contenu des pages
+@media only screen and (min-width: 0) {
+    // Cas des très petits écran : Mobile
+}
+
+@media only screen and (min-width: 768px) {
+    // Cas des écrans moyens : Tablettes
+}
+
+@media only screen and (min-width: 992px) {
+    // Cas des grands écrans : Desktops
+}
