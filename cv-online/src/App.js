@@ -25,8 +25,6 @@ const Main = () => {
   useEffect(() => {
     // Sélection des éléments du DOM nécessaires
     const scrollTopButton = document.querySelector('.scroll-top');
-    const mainContent = document.querySelector('.main-content');
-    const header = document.querySelector('header');
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -37,12 +35,6 @@ const Main = () => {
       } else {
         scrollTopButton.classList.add('d-none');
       }
-    };
-
-    // Fonction pour ajuster le padding-top du contenu principal en fonction de la hauteur de l'en-tête
-    const setPaddingTop = () => {
-      const headerHeight = header.offsetHeight;
-      mainContent.style.paddingTop = `${headerHeight}px`;
     };
 
     // Fonction pour fermer la barre de navigation lors du clic sur un lien de navigation
@@ -59,14 +51,10 @@ const Main = () => {
 
     // Ajout des écouteurs d'événements
     document.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', setPaddingTop);
 
     navLinks.forEach(link => {
       link.addEventListener('click', closeNavbar);
     });
-
-    // Initialisation du padding-top
-    setPaddingTop();
 
     // Ajout de l'écouteur d'événement pour le bouton de retour en haut
     scrollTopButton.addEventListener('click', () => {
@@ -76,7 +64,6 @@ const Main = () => {
     // Nettoyage des écouteurs d'événements lors du démontage du composant
     return () => {
       document.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', setPaddingTop);
       navLinks.forEach(link => { link.removeEventListener('click', closeNavbar); });
     };
   }, [location.pathname]); // Ajout de location.pathname comme dépendance

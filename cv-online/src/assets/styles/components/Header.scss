@@ -1,11 +1,17 @@
 // Header.scss
 
 // Importation des variables personnalisées
-@import '../base/variables';
+@use '../base/index' as *;
 
 // Styles pour les liens de navigation
 .nav-link {
+    color: $text-color; // Couleur du texte du menu
+
+    &.active {
+        color: $highlight-color; // Couleur du menu sélectionné
+    }
+
     &:hover {
-        color: $link-hover; // Changer la couleur des liens au survol
+        color: $link-hover-light; // Changer la couleur des liens au survol
     }
 }
