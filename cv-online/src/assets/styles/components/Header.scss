@@ -5,13 +5,21 @@
 
 // Styles pour les liens de navigation
 .nav-link {
-    color: $text-color; // Couleur du texte du menu
+    color: var(--bs-gray-400); // Couleur du texte du menu normal
+    transition: color 0.3s ease, font-weight 0.3s ease; // Transition pour les couleurs et le texte en gras
 
     &.active {
-        color: $highlight-color; // Couleur du menu sélectionné
+        color: $title-color !important; // Couleur du menu sélectionné
+        font-weight: bold; // Texte en gras pour le menu sélectionné
     }
 
-    &:hover {
-        color: $link-hover-light; // Changer la couleur des liens au survol
+    &:not(.active):hover {
+        color: $link-hover; // Changer la couleur des liens au survol avec transparence
+        font-weight: bold; // Texte en gras au survol
+
+        @media only screen and (min-width: 992px) {
+            // Cas des grands écrans : Desktops
+            background-color: $link-hover-light;
+        }
     }
 }
