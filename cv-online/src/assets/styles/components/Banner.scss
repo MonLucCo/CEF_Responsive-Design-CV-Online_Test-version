@@ -1,0 +1,30 @@
+// Article.scss
+
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+// Styles du composant
+.page-banner {
+    height: 150px; // Définir une hauteur pour la bannière 
+    background-size: cover; // Assurer que l'image couvre toute la bannière 
+    background-position: center; // Centrer l'image 
+}
+
+// Media Queries pour le contenu du composant
+@media only screen and (min-width: 0) {
+    .page-banner {
+        background-image: url('../../images/shared/banner-mobile.jpg'); // Image de fond pour les mobiles
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .page-banner {
+        background-image: url('../../images/shared/banner-tablette.jpg'); // Image de fond pour les tablettes
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .page-banner {
+        background-image: url('../../images/shared/banner.jpg'); // Image de fond pour les desktops
+    }
+}

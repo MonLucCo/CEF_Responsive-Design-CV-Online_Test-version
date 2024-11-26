@@ -1,8 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+// Importation des styles
 import '../assets/styles/components/Footer.scss';
 
+// Importation des données des projets
+import { projectsData } from '../data/data';
+
+// Importation des fonctions utilitaires 
+import { scrollToAbout } from '../utils/scrollUtils';
+
 const Footer = () => {
+    const navigate = useNavigate();
+
+    const handleAboutClick = (e) => {
+        e.preventDefault();
+        navigate('/');
+        setTimeout(() => {
+            scrollToAbout();
+        }, 100);
+    };
+
     return (
         <footer className="footer py-3">
             <div className="container">
@@ -24,7 +42,7 @@ const Footer = () => {
                         <h5>Liens utiles</h5>
                         <ul className="list-unstyled custom-list">
                             <li><Link to="/" className="custom-link">Accueil</Link></li>
-                            <li><Link to="/about" className="custom-link">A propos</Link></li>
+                            <li><a href="/#about" onClick={handleAboutClick} className="custom-link">À propos</a></li>
                             <li><Link to="/services" className="custom-link">Services</Link></li>
                             <li><Link to="/contact" className="custom-link">Me contacter</Link></li>
                             <li><Link to="/legal-notice" className="custom-link">Mentions légales</Link></li>
@@ -33,9 +51,13 @@ const Footer = () => {
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
                         <h5>Mes dernières réalisations</h5>
                         <ul className="list-unstyled custom-list">
-                            <li><Link to="/projects/fresh-food" className="custom-link">Fresh Food</Link></li>
-                            <li><Link to="/projects/akira" className="custom-link">Restaurant Akira</Link></li>
-                            <li><Link to="/projects/wellness" className="custom-link">Espace bien-être</Link></li>
+                            {projectsData.map((project, index) => (
+                                <li key={index}>
+                                    <a className="custom-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                                        {project.title}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 pt-2">

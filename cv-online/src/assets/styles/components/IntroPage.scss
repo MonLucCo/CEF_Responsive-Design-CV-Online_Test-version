@@ -1,0 +1,12 @@
+// IntroPage.scss
+
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+// Styles du composant
+.intro-section {
+    .separator {
+        border: 3px solid $primary-color;
+        opacity: 1;
+    }
+}
