@@ -2,16 +2,16 @@
 // Contient les variables du projet
 
 // Couleurs de base
-$background-color: #EEE; // Couleur de fond
-$text-color: #444; // Couleur du texte
-$title-color: #1e1e1e; // Couleur des titres
-$highlight-color: #000000; // Couleur des balises <strong>
-$primary-color: #0d6efd; // Couleur primaire
+$background-color-light: #EEE; // (consigne CEF) Couleur de fond
+$text-color: #444; // (consigne CEF) Couleur du texte
+$title-color: #1e1e1e; // (consigne CEF) Couleur des titres
+$highlight-color: #000000; // (consigne CEF) Couleur des balises <strong>
+$primary-color: #0d6efd; // (consigne CEF) Couleur primaire
 
 // Effet de couleur
-$link-hover: rgba(255, 255, 255, 0.8); // Effet survol d'un lien
-$link-hover-light: rgba(0, 0, 0, 0.8); // Effet survol d'un lien clair
-$overlay-color: rgba(0, 0, 0, 0.3); // Overlay pour assombrir
+$link-hover: rgba(255, 255, 255, 0.8); // (consigne CEF) Effet survol d'un lien
+$link-hover-light: rgba(0, 0, 0, 0.2); // Effet survol d'un lien clair
+$overlay-color: rgba(0, 0, 0, 0.3); // (consigne CEF) Overlay pour assombrir
 
 // Couleurs spécifiques
 $background-color--btn-scroll-top: #298eff; // Couleur spécifique Bouton Scroll-Up

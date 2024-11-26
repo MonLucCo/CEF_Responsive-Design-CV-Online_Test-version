@@ -39,14 +39,12 @@ const Main = () => {
 
     // Fonction pour fermer la barre de navigation lors du clic sur un lien de navigation
     const closeNavbar = (event) => {
+      const navbarToggler = document.querySelector('.navbar-toggler');
       const navbarCollapse = document.querySelector('.navbar-collapse');
-      const targetPath = event.currentTarget.getAttribute('href');
       if (navbarCollapse.classList.contains('show')) {
         navbarToggler.click();
       }
-      if (location.pathname !== targetPath) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     // Ajout des écouteurs d'événements
