@@ -1,6 +1,14 @@
 // _components.scss
 // Contient les styles spécifiques aux composants
 
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+// Style pour les icônes
+.icon--custom-color {
+    color: $primary-color;
+}
+
 // Media Queries pour positionner le contenu des pages
 @media only screen and (min-width: 0) {
     // Cas des très petits écran : Mobile

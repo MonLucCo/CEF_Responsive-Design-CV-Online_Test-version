@@ -1,0 +1,19 @@
+// Article.scss
+
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+.card {
+    &:hover {
+        i {
+            color: #cde1f8;
+            transition: color 0.3s ease;
+        }
+
+    }
+
+    i {
+        color: $primary-color;
+    }
+
+}
