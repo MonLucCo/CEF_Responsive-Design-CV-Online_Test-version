@@ -3,7 +3,7 @@
 // Importation des variables personnalisées
 @use '../base/index' as *;
 
-// Section Héro
+// Styles de la page
 .hero-section {
     position: relative; // Positionnement relatif pour permettre l'utilisation de la surcouche
     height: 100vh; // Hauteur de la section égale à la hauteur de la fenêtre
@@ -22,6 +22,13 @@
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+// Section À Propos
+.about-section {
+    hr {
+        border-top: 2px solid $primary-color; // Colorisation de la séparation
     }
 }
 
