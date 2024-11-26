@@ -1,0 +1,12 @@
+// Project.scss
+
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+// Styles du composant
+.card-content {
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+}

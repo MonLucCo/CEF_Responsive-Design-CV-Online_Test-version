@@ -8,19 +8,19 @@
 
 // Media Queries pour le contenu de la page
 @media only screen and (min-width: 0) {
-    .services-page {
+    .projects-page {
         margin-top: 56px; // Offset pour éviter le masquage dû à la barre de navigation
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .services-page {
+    .projects-page {
         margin-top: 56px; // Offset pour éviter le masquage dû à la barre de navigation
     }
 }
 
 @media only screen and (min-width: 992px) {
-    .services-page {
+    .projects-page {
         margin-top: 72px; // Offset pour éviter le masquage dû à la barre de navigation
     }
 }

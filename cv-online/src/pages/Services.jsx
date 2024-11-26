@@ -1,17 +1,27 @@
 import React from 'react';
-import Article from '../components/Article';
+
+// Importation des styles
 import '../assets/styles/pages/Services.scss';
+
+// Importation des composants
+import Article from '../components/Article';
+import Banner from '../components/Banner';
+import IntroPage from '../components/IntroPage';
 
 const Services = () => {
     return (
         <div className='services-page'>
-            <div className='page-banner'></div>
+            {/* Bannière de la page */}
+            <Banner />
+
             <div className="page-content container py-4">
-                <section className="intro-section text-center py-3">
-                    <h1 className='text-uppercase fw-bold'>Mon offre de services</h1>
-                    <p>Voici les prestations sur lesquelles je peux intervenir</p>
-                    <hr className="separator mx-auto w-25" />
-                </section>
+                {/* Section d'introduction */}
+                <IntroPage
+                    title='Mon offre de services'
+                    description='Voici les prestations sur lesquelles je peux intervenir.'
+                />
+
+                {/* Section des services */}
                 <section className="services-section row articles my-3 py-3">
                     <div className="col-12 col-md-4 d-flex mb-4 mb-md-0">
                         <Article
