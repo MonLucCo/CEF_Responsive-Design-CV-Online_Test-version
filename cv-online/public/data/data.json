@@ -1,0 +1,34 @@
+{
+    "skillsData": [
+        {
+            "id": 1,
+            "name": "HTML5",
+            "level": "90%",
+            "color": "bg-danger"
+        },
+        {
+            "id": 2,
+            "name": "CSS3",
+            "level": "80%",
+            "color": "bg-info"
+        },
+        {
+            "id": 3,
+            "name": "JavaScript",
+            "level": "70%",
+            "color": "bg-warning"
+        },
+        {
+            "id": 4,
+            "name": "PHP",
+            "level": "60%",
+            "color": "bg-success"
+        },
+        {
+            "id": 5,
+            "name": "React",
+            "level": "50%",
+            "color": "bg-primary"
+        }
+    ]
+}
