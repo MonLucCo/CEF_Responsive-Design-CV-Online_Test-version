@@ -5,10 +5,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../assets/styles/components/Footer.scss';
 
 // Importation des données des projets
-import { projectsData } from '../data/data';
+import { projectsData, blogPostsData } from '../data/data';
 
 // Importation des fonctions utilitaires 
 import { scrollToAbout } from '../utils/scrollUtils';
+import handleLinkClick from "../utils/handleLinkClick";
 
 const Footer = () => {
     const navigate = useNavigate();
@@ -20,6 +21,8 @@ const Footer = () => {
             scrollToAbout();
         }, 100);
     };
+
+    const recentPosts = blogPostsData.slice(0, 3); // Obtenir les 3 derniers articles publiés
 
     return (
         <footer className="footer py-3">
@@ -63,9 +66,15 @@ const Footer = () => {
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
                         <h5>Mes derniers articles</h5>
                         <ul className="list-unstyled custom-list">
-                            <li><Link to="/blog/html-css" className="custom-link">Coder son site HTML/CSS</Link></li>
-                            <li><Link to="/blog/sell-products" className="custom-link">Vendre ses produits sur le web</Link></li>
-                            <li><Link to="/blog/google-ranking" className="custom-link">Se positionner sur Google</Link></li>
+                            {recentPosts.map(post => (
+                                <li key={post.id}>
+                                    <a className="custom-link" href=""
+                                        onClick={(event) => handleLinkClick(event, post.title, post.linkPost)}
+                                        target="_blank" rel="noopener noreferrer">
+                                        {post.title}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
