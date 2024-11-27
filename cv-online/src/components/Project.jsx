@@ -14,7 +14,7 @@ const Project = ({ imageName, title, description, link, tools }) => {
             <div className="card-content text-center">
                 <img src={image} className="card-img-top" alt={title} />
                 <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
+                    <h2 className="card-title">{title}</h2>
                     <p className="card-text">{description}</p>
                     <a href={link} className="btn btn-outline-primary" target='_blank'>Voir</a>
                 </div>

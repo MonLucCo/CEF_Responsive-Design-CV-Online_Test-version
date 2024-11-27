@@ -1,0 +1,15 @@
+// Publication.scss
+
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+// Styles du composant
+.publication {
+    overflow: hidden;
+
+    &__image {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+}

@@ -34,4 +34,62 @@ const skillsData = [
     { name: 'React', level: '50%', color: 'bg-primary' }
 ];
 
-export { projectsData, skillsData };
+// Données des publications
+const blogPostsData = [
+    {
+        id: 1,
+        imagePath: "blog/",
+        imageName: "coder.jpg",
+        title: "Coder son site en HTML/CSS",
+        date: "22 août 2022",
+        description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        linkPost: ""
+    },
+    {
+        id: 2,
+        imagePath: "blog/",
+        imageName: "croissance.jpg",
+        title: "Vendre ses produits sur le web",
+        date: "20 août 2022",
+        description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        linkPost: "https://example.com/Blog-John-Doe/vendre-ses-produits-sur-le-web"
+    },
+    {
+        id: 3,
+        imagePath: "blog/",
+        imageName: "google.jpg",
+        title: "Se positionner sur Google",
+        date: "1 août 2022",
+        description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        linkPost: ""
+    },
+    {
+        id: 4,
+        imagePath: "blog/",
+        imageName: "screens.jpg",
+        title: "Coder en responsive design",
+        date: "31 juillet 2022",
+        description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        linkPost: ""
+    },
+    {
+        id: 5,
+        imagePath: "blog/",
+        imageName: "seo.jpg",
+        title: "Techniques de référencement",
+        date: "30 juillet 2022",
+        description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        linkPost: "https://example.com/Blog-John-Doe/Techniques-de-référencement.html"
+    },
+    {
+        id: 6,
+        imagePath: "blog/",
+        imageName: "technos.png",
+        title: "Apprendre à coder",
+        date: "12 juillet 2022",
+        description: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        linkPost: ""
+    }
+];
+
+export { projectsData, skillsData, blogPostsData };
