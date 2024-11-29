@@ -25,7 +25,6 @@ const Main = () => {
   useEffect(() => {
     // Sélection des éléments du DOM nécessaires
     const scrollTopButton = document.querySelector('.scroll-top');
-    const navbarToggler = document.querySelector('.navbar-toggler');
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Fonction pour afficher ou masquer le bouton de retour en haut en fonction du défilement

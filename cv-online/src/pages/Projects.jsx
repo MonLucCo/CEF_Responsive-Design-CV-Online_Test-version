@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { loadData } from '../utils/dataLoader';
+import { CONSTANTS, DATA_PATHS } from '../config/config';
 
 // Importation des styles
 import '../assets/styles/pages/Projects.scss';
@@ -8,10 +10,26 @@ import Banner from '../components/Banner';
 import Project from '../components/Project';
 import IntroPage from '../components/IntroPage';
 
-// Importation des données des projets
-import { projectsData } from '../data/data';
-
 const Projects = () => {
+    // État pour stocker les données des projets
+    const [projectsData, setProjectsData] = useState([]);
+
+    // Utilisation de useEffect pour charger les données au montage du composant
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                // Chargement des données depuis data.json
+                const data = await loadData(DATA_PATHS.localJsonData); // Utilisation de la variable centralisée
+                setProjectsData(data.projectsData);
+            } catch (error) {
+                // Gestion des erreurs de chargement des données
+                console.error('Erreur de chargement des données:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <div className='projects-page'>
             {/* Bannière de la page */}
@@ -20,8 +38,8 @@ const Projects = () => {
             <div className="page-content container py-4">
                 {/* Section d'introduction */}
                 <IntroPage
-                    title='Portfolio'
-                    description='Voici quelques-unes de mes réalisations.'
+                    title={CONSTANTS.projectsPageTitle}
+                    description={CONSTANTS.projectsPageSubTitle}
                 />
 
                 {/* Section des projets */}
@@ -29,7 +47,7 @@ const Projects = () => {
                     {projectsData.map((project, index) => (
                         <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
                             <Project
-                                imageName={project.imageName}
+                                image={project.imageUrl}
                                 title={project.title}
                                 description={project.description}
                                 link={project.link}

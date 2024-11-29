@@ -3,11 +3,11 @@ import React from 'react';
 // Composant fonctionnel pour afficher les compétences
 const Skills = ({ skills }) => {
     return (
-        <React.Fragment>
-            {skills.map((skill, index) => (
-                <div key={index} className="pt-2 pb-3">
+        <>
+            {skills.map((skill) => (
+                <div key={skill.id} className="pt-2 pb-3">
                     {/* Titre de la compétence avec le niveau */}
-                    <h5 className="text-start text-uppercase">{`${skill.name} ${skill.level}`}</h5>
+                    <h3 className="text-start text-uppercase">{`${skill.name} ${skill.level}`}</h3>
                     <div className="progress">
                         {/* Barre de progression avec la couleur Bootstrap correspondante */}
                         <div
@@ -21,7 +21,7 @@ const Skills = ({ skills }) => {
                     </div>
                 </div>
             ))}
-        </React.Fragment>
+        </>
     );
 };
 

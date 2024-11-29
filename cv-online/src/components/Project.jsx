@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 // Importation des styles pour le composant Project
 import '../assets/styles/components/Project.scss';
 
-const Project = ({ imageName, title, description, link, tools }) => {
-    // Utilisation de require() pour importer l'image
-    const image = require(`../assets/images/projects/${imageName}`);
-
+const Project = ({ image, title, description, link, tools }) => {
     return (
         <div className="card">
             {/* Contenu de la carte avec l'image, le titre, la description et le bouton */}
@@ -16,7 +13,7 @@ const Project = ({ imageName, title, description, link, tools }) => {
                 <div className="card-body">
                     <h2 className="card-title">{title}</h2>
                     <p className="card-text">{description}</p>
-                    <a href={link} className="btn btn-outline-primary" target='_blank'>Voir</a>
+                    <a href={link} className="btn btn-outline-primary" target='_blank' rel="noopener noreferrer">Voir</a>
                 </div>
             </div>
             {/* Footer avec les outils */}
@@ -28,7 +25,7 @@ const Project = ({ imageName, title, description, link, tools }) => {
 };
 
 Project.propTypes = {
-    imageName: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,

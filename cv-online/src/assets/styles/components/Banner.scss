@@ -1,4 +1,4 @@
-// Article.scss
+// Banner.scss
 
 // Importation des variables personnalisées
 @use '../base/index' as *;
@@ -13,18 +13,18 @@
 // Media Queries pour le contenu du composant
 @media only screen and (min-width: 0) {
     .page-banner {
-        background-image: url('../../images/shared/banner-mobile.jpg'); // Image de fond pour les mobiles
+        background-image: url($banner-bg-mobile); // Image de fond pour les mobiles
     }
 }
 
 @media only screen and (min-width: 768px) {
     .page-banner {
-        background-image: url('../../images/shared/banner-tablette.jpg'); // Image de fond pour les tablettes
+        background-image: url($banner-bg-tablette); // Image de fond pour les tablettes
     }
 }
 
 @media only screen and (min-width: 992px) {
     .page-banner {
-        background-image: url('../../images/shared/banner.jpg'); // Image de fond pour les desktops
+        background-image: url($banner-bg-desktop); // Image de fond pour les desktops
     }
 }

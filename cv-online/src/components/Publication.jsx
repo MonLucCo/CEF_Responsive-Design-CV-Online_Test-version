@@ -8,10 +8,7 @@ import handleLinkClick from '../utils/handleLinkClick';
 import '../assets/styles/components/Publication.scss';
 
 
-const Publication = ({ imagePath, title, date, description, linkPost }) => {
-    // Utilisation de require() pour importer l'image
-    const image = require(`../assets/images/${imagePath}`);
-
+const Publication = ({ image, title, date, description, linkPost }) => {
     return (
         <article className="publication card">
             <img src={image} alt={title} className="publication__image" />
@@ -29,7 +26,7 @@ const Publication = ({ imagePath, title, date, description, linkPost }) => {
 };
 
 Publication.propTypes = {
-    imagePath: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
