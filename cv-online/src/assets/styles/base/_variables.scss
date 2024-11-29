@@ -15,3 +15,14 @@ $overlay-color: rgba(0, 0, 0, 0.3); // (consigne CEF) Overlay pour assombrir
 
 // Couleurs spécifiques
 $background-color--btn-scroll-top: #298eff; // Couleur spécifique Bouton Scroll-Up
+
+// Chemins des images (url pour les background)
+$imageStylePath: '/../public'; // Chemin relatif à ajouter à chaque url pour les images en background
+$hero-bg-mobile: '/../public/images/home/hero-bg-mobile.jpg';
+$hero-bg-tablette: '/../public/images/home/hero-bg-tablette.jpg';
+$hero-bg-desktop: '/../public/images/home/hero-bg.jpg';
+$banner-bg-mobile: '/../public/images/banner/banner-mobile.jpg';
+$banner-bg-tablette: '/../public/images/banner/banner-tablette.jpg';
+$banner-bg-desktop: '/../public/images/banner/banner.jpg';
+
+// Autres variables existantes

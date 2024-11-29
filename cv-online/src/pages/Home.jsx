@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { loadData } from '../utils/dataLoader';
+
+// Importation des données des projets
 import { IMAGE_URLS, DATA_PATHS, CONSTANTS } from '../config/config';
 
 // Importation des styles
@@ -10,6 +11,7 @@ import Skills from '../components/Skills';
 
 // Importation des fonctions utilitaires 
 import { scrollToAbout } from '../utils/scrollUtils';
+import { loadData } from '../utils/dataLoader';
 
 // Composant fonctionnel pour la page d'accueil
 const Home = () => {

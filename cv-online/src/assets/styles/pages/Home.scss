@@ -3,6 +3,7 @@
 // Importation des variables personnalisées
 @use '../base/index' as *;
 
+
 // Styles de la page
 .hero-section {
     position: relative; // Positionnement relatif pour permettre l'utilisation de la surcouche
@@ -35,7 +36,7 @@
 // Media Queries pour les Images de Fond et les Offsets
 @media only screen and (min-width: 0) {
     .hero-section {
-        background-image: url('../../images/home/hero-bg-mobile.jpg'); // Image de fond pour les mobiles
+        background-image: url($hero-bg-mobile); // Image de fond pour les mobiles
     }
 
     .home-page {
@@ -45,7 +46,8 @@
 
 @media only screen and (min-width: 768px) {
     .hero-section {
-        background-image: url('../../images/home/hero-bg-tablette.jpg'); // Image de fond pour les tablettes
+        // background-image: url('../../../../public/images/home/hero-bg-tablette.jpg'); // Image de fond pour les tablettes
+        background-image: url($hero-bg-tablette); // Image de fond pour les tablettes
     }
 
     .home-page {
@@ -55,7 +57,7 @@
 
 @media only screen and (min-width: 992px) {
     .hero-section {
-        background-image: url('../../images/home/hero-bg.jpg'); // Image de fond pour les desktops
+        background-image: url($hero-bg-desktop); // Image de fond pour les desktops
     }
 
     .home-page {

@@ -56,5 +56,55 @@
             "link": "https://example.com/espace-bien-etre/index.html",
             "tools": "en HTML/CSS"
         }
+    ],
+    "blogPostsData": [
+        {
+            "id": 1,
+            "imageUrl": "/images/blog/coder.jpg",
+            "title": "Coder son site en HTML/CSS",
+            "date": "22 août 2022",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            "linkPost": ""
+        },
+        {
+            "id": 2,
+            "imageUrl": "/images/blog/croissance.jpg",
+            "title": "Vendre ses produits sur le web",
+            "date": "20 août 2022",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            "linkPost": "https://example.com/Blog-John-Doe/vendre-ses-produits-sur-le-web"
+        },
+        {
+            "id": 3,
+            "imageUrl": "/images/blog/google.jpg",
+            "title": "Se positionner sur Google",
+            "date": "1 août 2022",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            "linkPost": ""
+        },
+        {
+            "id": 4,
+            "imageUrl": "/images/blog/screens.jpg",
+            "title": "Coder en responsive design",
+            "date": "31 juillet 2022",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            "linkPost": ""
+        },
+        {
+            "id": 5,
+            "imageUrl": "/images/blog/seo.jpg",
+            "title": "Techniques de référencement",
+            "date": "30 juillet 2022",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            "linkPost": "https://example.com/Blog-John-Doe/Techniques-de-référencement.html"
+        },
+        {
+            "id": 6,
+            "imageUrl": "/images/blog/technos.png",
+            "title": "Apprendre à coder",
+            "date": "12 juillet 2022",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+            "linkPost": ""
+        }
     ]
 }

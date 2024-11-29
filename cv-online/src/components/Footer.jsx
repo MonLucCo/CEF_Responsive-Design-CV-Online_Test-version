@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 // Importation des styles
 import '../assets/styles/components/Footer.scss';
 
-// Importation des données des projets
-import { projectsData, blogPostsData } from '../data/data';
-
 // Importation des fonctions utilitaires 
 import { scrollToAbout } from '../utils/scrollUtils';
 import handleLinkClick from "../utils/handleLinkClick";
+import { loadData } from '../utils/dataLoader';
+
+// Importation des données des projets
+import { DATA_PATHS } from '../config/config';
 
 const Footer = () => {
     const navigate = useNavigate();
+
+    const [projectsData, setProjectsData] = useState([]);
+    const [blogPostsData, setBlogPostsData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                // Chargement des données depuis data.json
+                const data = await loadData(DATA_PATHS.localJsonData);
+                setProjectsData(data.projectsData);
+                setBlogPostsData(data.blogPostsData);
+            } catch (error) {
+                // Gestion des erreurs de chargement des données
+                console.error('Erreur de chargement des données:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     const handleAboutClick = (e) => {
         e.preventDefault();
