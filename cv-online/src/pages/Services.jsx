@@ -7,6 +7,7 @@ import '../assets/styles/pages/Services.scss';
 import Article from '../components/Article';
 import Banner from '../components/Banner';
 import IntroPage from '../components/IntroPage';
+import { CONSTANTS } from '../config/config';
 
 const Services = () => {
     return (
@@ -17,8 +18,8 @@ const Services = () => {
             <div className="page-content container py-4">
                 {/* Section d'introduction */}
                 <IntroPage
-                    title='Mon offre de services'
-                    description='Voici les prestations sur lesquelles je peux intervenir.'
+                    title={CONSTANTS.servicesPageTitle}
+                    description={CONSTANTS.servicesPageSubTitle}
                 />
 
                 {/* Section des services */}

@@ -16,7 +16,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <NavLink className="nav-link py-3 px-2 px-md-3t" to="/">Accueil</NavLink>
+                                <NavLink className="nav-link py-3 px-2 px-md-3" to="/">Accueil</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link py-3 px-2 px-md-3" to="/services">Services</NavLink>

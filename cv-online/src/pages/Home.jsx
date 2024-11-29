@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { loadData } from '../utils/dataLoader';
-import { IMAGE_URLS, DATA_PATHS } from '../config/config';
+import { IMAGE_URLS, DATA_PATHS, CONSTANTS } from '../config/config';
 
 // Importation des styles
 import '../assets/styles/pages/Home.scss';
@@ -21,7 +21,7 @@ const Home = () => {
         const fetchData = async () => {
             try {
                 // Chargement des données depuis data.json
-                const data = await loadData(DATA_PATHS.skillsData); // Utilisation de la variable centralisée
+                const data = await loadData(DATA_PATHS.localJsonData); // Utilisation de la variable centralisée
                 setSkillsData(data.skillsData);
             } catch (error) {
                 // Gestion des erreurs de chargement des données
@@ -37,8 +37,8 @@ const Home = () => {
             <section className="hero-section d-flex flex-column justify-content-center align-items-center">
                 <div className="overlay z-1"></div>
                 <div className="container z-2 text-center">
-                    <h1>Bonjour, je suis John Doe</h1>
-                    <h2>Développeur web full stack</h2>
+                    <h1>{CONSTANTS.homePageHeroTitle}</h1>
+                    <h2>{CONSTANTS.homePageHeroSubTitle}</h2>
                     <button onClick={scrollToAbout} className="btn btn-primary mt-3"> En savoir plus </button>
                 </div>
             </section>

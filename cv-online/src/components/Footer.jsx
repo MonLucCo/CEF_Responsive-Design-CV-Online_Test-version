@@ -68,7 +68,8 @@ const Footer = () => {
                         <ul className="list-unstyled custom-list">
                             {recentPosts.map(post => (
                                 <li key={post.id}>
-                                    <a className="custom-link" href=""
+                                    <a className="custom-link"
+                                        href={post.linkPost}  // Pour résoudre un Warning => lien non utilisé ! autre possibilité : utiliser un bouton stylisé (ci-après)
                                         onClick={(event) => handleLinkClick(event, post.title, post.linkPost)}
                                         target="_blank" rel="noopener noreferrer">
                                         {post.title}

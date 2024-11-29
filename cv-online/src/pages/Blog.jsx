@@ -10,6 +10,7 @@ import Publication from '../components/Publication';
 
 // Importation des données des projets
 import { blogPostsData } from '../data/data';
+import { CONSTANTS } from '../config/config';
 
 const Blog = () => {
     return (
@@ -20,8 +21,8 @@ const Blog = () => {
             <div className="page-content container py-4">
                 {/* Section d'introduction */}
                 <IntroPage
-                    title='Blog'
-                    description='Découvrez ici quelques articles sur le développement web.'
+                    title={CONSTANTS.blogPageTitle}
+                    description={CONSTANTS.blogPageSubTitle}
                 />
 
                 {/* Section des publications */}

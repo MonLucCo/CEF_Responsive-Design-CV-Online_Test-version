@@ -30,5 +30,31 @@
             "level": "50%",
             "color": "bg-primary"
         }
+    ],
+    "projectsData": [
+        {
+            "id": 1,
+            "imageUrl": "/images/projects/fresh-food.jpg",
+            "title": "Fresh food",
+            "description": "Réalisation d'un site avec commande en ligne.",
+            "link": "https://example.com/fresh-food/index.html",
+            "tools": "avec PHP et MySQL"
+        },
+        {
+            "id": 2,
+            "imageUrl": "/images/projects/restaurant-japonais.jpg",
+            "title": "Restaurant Akira",
+            "description": "Réalisation d'un site vitrine.",
+            "link": "https://example.com/restaurant-akira/index.html",
+            "tools": "avec WordPress"
+        },
+        {
+            "id": 3,
+            "imageUrl": "/images/projects/espace-bien-etre.jpg",
+            "title": "Espace bien-être",
+            "description": "Réalisation d'un site vitrine pour un praticien de bien-être.",
+            "link": "https://example.com/espace-bien-etre/index.html",
+            "tools": "en HTML/CSS"
+        }
     ]
 }
