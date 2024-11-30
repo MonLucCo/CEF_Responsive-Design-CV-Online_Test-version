@@ -106,5 +106,20 @@
             "description": "Some quick example text to build on the card title and make up the bulk of the card's content.",
             "linkPost": ""
         }
-    ]
+    ],
+    "contactData": {
+        "name": "John Doe",
+        "address": {
+            "rue": "40 rue Laure Diebold",
+            "ville": "Lyon",
+            "codePostal": "69009",
+            "pays": "France"
+        },
+        "phone": "06 20 30 40 50",
+        "socialLinks": {
+            "LinkedIn": "https://www.linkedin.com/in/johndoe",
+            "Twitter": "https://twitter.com/johndoe",
+            "Facebook": "https://www.facebook.com/johndoe"
+        }
+    }
 }

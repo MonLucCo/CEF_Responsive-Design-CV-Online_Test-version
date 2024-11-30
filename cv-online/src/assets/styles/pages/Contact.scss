@@ -1,0 +1,26 @@
+// Contact.scss
+
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+// Styles du composant
+// ...
+
+// Media Queries pour le contenu de la page
+@media only screen and (min-width: 0) {
+    .contact-page {
+        margin-top: 56px; // Offset pour éviter le masquage dû à la barre de navigation
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contact-page {
+        margin-top: 56px; // Offset pour éviter le masquage dû à la barre de navigation
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .contact-page {
+        margin-top: 72px; // Offset pour éviter le masquage dû à la barre de navigation
+    }
+}
