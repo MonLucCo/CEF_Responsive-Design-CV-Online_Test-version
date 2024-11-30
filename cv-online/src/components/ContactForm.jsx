@@ -18,6 +18,11 @@ const ContactForm = () => {
         return regex.test(email);
     };
 
+    const validatePhone = (phone) => {
+        const regex = /^\d{10}$/; // Exemple pour un numéro de téléphone à 10 chiffres
+        return regex.test(phone);
+    };
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -37,7 +42,11 @@ const ContactForm = () => {
         } else if (!validateEmail(formData.email)) {
             formErrors.email = 'Veuillez entrer une adresse e-mail valide';
         }
-        if (!formData.phone) formErrors.phone = 'Le numéro de téléphone est obligatoire';
+        if (!formData.phone) {
+            formErrors.phone = 'Le numéro de téléphone est obligatoire';
+        } else if (!validatePhone(formData.phone)) {
+            formErrors.phone = 'Veuillez entrer un numéro de téléphone valide';
+        }
         if (!formData.subject) formErrors.subject = 'Le sujet est obligatoire';
         if (!formData.message) formErrors.message = 'Le message est obligatoire';
 
@@ -79,13 +88,13 @@ const ContactForm = () => {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    className="form-control"
+                                    className={`form-control ${errors.name ? 'is-invalid' : ''}`}
                                     placeholder="Votre nom"
                                     value={formData.name}
                                     onChange={handleChange}
                                     disabled={isSubmitting}
                                 />
-                                {errors.name && <div className="text-danger text-center">{errors.name}</div>}
+                                {errors.name && <div className="invalid-feedback text-center">{errors.name}</div>}
                             </div>
                             <div className="form-group">
                                 <label htmlFor="email" className="visually-hidden">Adresse email</label>
@@ -93,13 +102,13 @@ const ContactForm = () => {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    className="form-control"
+                                    className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                                     placeholder="Votre adresse email"
                                     value={formData.email}
                                     onChange={handleChange}
                                     disabled={isSubmitting}
                                 />
-                                {errors.email && <div className="text-danger text-center">{errors.email}</div>}
+                                {errors.email && <div className="invalid-feedback text-center">{errors.email}</div>}
                             </div>
                             <div className="form-group">
                                 <label htmlFor="phone" className="visually-hidden">Numéro de téléphone</label>
@@ -107,13 +116,13 @@ const ContactForm = () => {
                                     type="tel"
                                     id="phone"
                                     name="phone"
-                                    className="form-control"
+                                    className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
                                     placeholder="Votre numéro de téléphone"
                                     value={formData.phone}
                                     onChange={handleChange}
                                     disabled={isSubmitting}
                                 />
-                                {errors.phone && <div className="text-danger text-center">{errors.phone}</div>}
+                                {errors.phone && <div className="invalid-feedback text-center">{errors.phone}</div>}
                             </div>
                             <div className="form-group">
                                 <label htmlFor="subject" className="visually-hidden">Sujet</label>
@@ -121,27 +130,27 @@ const ContactForm = () => {
                                     type="text"
                                     id="subject"
                                     name="subject"
-                                    className="form-control"
+                                    className={`form-control ${errors.subject ? 'is-invalid' : ''}`}
                                     placeholder="Sujet"
                                     value={formData.subject}
                                     onChange={handleChange}
                                     disabled={isSubmitting}
                                 />
-                                {errors.subject && <div className="text-danger text-center">{errors.subject}</div>}
+                                {errors.subject && <div className="invalid-feedback text-center">{errors.subject}</div>}
                             </div>
                             <div className="form-group">
                                 <label htmlFor="message" className="visually-hidden">Message</label>
                                 <textarea
                                     id="message"
                                     name="message"
-                                    className="form-control"
+                                    className={`form-control ${errors.message ? 'is-invalid' : ''}`}
                                     rows="5"
                                     placeholder="Votre message"
                                     value={formData.message}
                                     onChange={handleChange}
                                     disabled={isSubmitting}
                                 ></textarea>
-                                {errors.message && <div className="text-danger text-center">{errors.message}</div>}
+                                {errors.message && <div className="invalid-feedback text-center">{errors.message}</div>}
                             </div>
                             <div className='form-submit d-flex justify-content-center'>
                                 <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
