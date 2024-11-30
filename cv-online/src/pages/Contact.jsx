@@ -12,6 +12,8 @@ import IntroPage from '../components/IntroPage';
 
 // Importation des données des projets
 import { DATA_PATHS, CONSTANTS } from '../config/config';
+import ContactForm from '../components/ContactForm';
+import ContactDetails from '../components/ContactDetails';
 
 const Contact = () => {
     // État pour stocker les données des compétences
@@ -33,15 +35,6 @@ const Contact = () => {
         fetchData();
     }, []);
 
-    const contactDetails = [
-        { label: 'Nom', value: contactData.name },
-        { label: 'Adresse', value: `${contactData.address?.rue}, ${contactData.address?.codePostal} ${contactData.address?.ville}, ${contactData.address?.pays}` },
-        { label: 'Téléphone', value: contactData.phone },
-        { label: 'LinkedIn', value: contactData.socialLinks?.LinkedIn },
-        { label: 'Twitter', value: contactData.socialLinks?.Twitter },
-        { label: 'Facebook', value: contactData.socialLinks?.Facebook }
-    ];
-
     return (
         <div className='contact-page'>
             {/* Bannière de la page */}
@@ -55,12 +48,11 @@ const Contact = () => {
                 />
 
                 {/* Section du contact */}
-                <section className="contact-section row">
-                    {contactDetails.map((contact, index) => (
-                        <article key={index} className="col-12 col-md-6 col-lg-4 mb-4">
-                            <strong>{contact.label} : </strong> {contact.value}
-                        </article>
-                    ))}
+                <section className="contact-section container">
+                    <div className='row'>
+                        <ContactForm />
+                        <ContactDetails contactData={contactData} />
+                    </div>
                 </section>
             </div>
         </div>
