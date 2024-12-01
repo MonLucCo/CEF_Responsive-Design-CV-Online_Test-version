@@ -17,6 +17,7 @@ const Footer = () => {
 
     const [projectsData, setProjectsData] = useState([]);
     const [blogPostsData, setBlogPostsData] = useState([]);
+    const [contactData, setContactData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,6 +26,7 @@ const Footer = () => {
                 const data = await loadData(DATA_PATHS.localJsonData);
                 setProjectsData(data.projectsData);
                 setBlogPostsData(data.blogPostsData);
+                setContactData(data.contactData);
             } catch (error) {
                 // Gestion des erreurs de chargement des données
                 console.error('Erreur de chargement des données:', error);
@@ -44,20 +46,24 @@ const Footer = () => {
 
     const recentPosts = blogPostsData.slice(0, 3); // Obtenir les 3 derniers articles publiés
 
+    // Déstructuration des données de contact avec un préfixe et valeurs par défaut 
+    const { name: contactName = '', address: contactAddress = {}, phone: contactPhone = '', socialLinks: contactSocialLinks = {} } = contactData;
+    const { rue: contactRue = '', codePostal: contactCodePostal = '', ville: contactVille = '', pays: contactPays = '' } = contactAddress;
+
     return (
         <footer className="footer py-3">
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
-                        <h5>John Doe</h5>
-                        <p>40 rue Laure Diebold<br />69009 Lyon, France<br />Téléphone : 06 20 30 40 50</p>
-                        <a href="https://github.com/github-john-doe" target="_blank" rel="noopener noreferrer nofollow" className="me-2">
+                        <h5>{contactName}</h5>
+                        <p>{contactRue}<br />{contactCodePostal} {contactVille}, {contactPays}<br />Téléphone : {contactPhone}</p>
+                        <a href={contactSocialLinks.LinkedIn} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
                             <i className="fab fa-github"></i>
                         </a>
-                        <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer nofollow" className="me-2">
+                        <a href={contactSocialLinks.Twitter} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
                             <i className="fab fa-twitter"></i>
                         </a>
-                        <a href="https://linkedin.com/in/johndoe123" target="_blank" rel="noopener noreferrer nofollow">
+                        <a href={contactSocialLinks.Facebook} target="_blank" rel="noopener noreferrer nofollow">
                             <i className="fab fa-linkedin"></i>
                         </a>
                     </div>

@@ -1,0 +1,36 @@
+// Contact.scss
+
+// Importation des variables personnalisées
+@use '../base/index' as *;
+
+// Styles du composant
+// ...
+
+.contact-page {
+    background-image: url($contact-bg); // Image de fond pour la page
+    background-size: cover; // Couvrir toute la section avec l'image de fond
+    background-position: center center; // Centrer l'image de fond
+
+    .overlay {
+        background-color: $overlay-bg-contact; // Surcouche bleu de l'image de fond
+    }
+}
+
+// Media Queries pour le contenu de la page
+@media only screen and (min-width: 0) {
+    .contact-page {
+        margin-top: 56px; // Offset pour éviter le masquage dû à la barre de navigation
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contact-page {
+        margin-top: 56px; // Offset pour éviter le masquage dû à la barre de navigation
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .contact-page {
+        margin-top: 72px; // Offset pour éviter le masquage dû à la barre de navigation
+    }
+}

@@ -12,6 +12,7 @@ $primary-color: #0d6efd; // (consigne CEF) Couleur primaire
 $link-hover: rgba(255, 255, 255, 0.8); // (consigne CEF) Effet survol d'un lien
 $link-hover-light: rgba(0, 0, 0, 0.2); // Effet survol d'un lien clair
 $overlay-color: rgba(0, 0, 0, 0.3); // (consigne CEF) Overlay pour assombrir
+$overlay-bg-contact: rgba(0, 105, 255, 0.5); // (consigne CEF) Overlay de l'image de fond de la page Contact
 
 // Couleurs spécifiques
 $background-color--btn-scroll-top: #298eff; // Couleur spécifique Bouton Scroll-Up
@@ -24,5 +25,6 @@ $hero-bg-desktop: '/../public/images/home/hero-bg.jpg';
 $banner-bg-mobile: '/../public/images/banner/banner-mobile.jpg';
 $banner-bg-tablette: '/../public/images/banner/banner-tablette.jpg';
 $banner-bg-desktop: '/../public/images/banner/banner.jpg';
+$contact-bg: '/../public/images/contact/contact-bg.jpg';
 
 // Autres variables existantes
