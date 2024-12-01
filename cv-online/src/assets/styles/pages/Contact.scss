@@ -6,6 +6,16 @@
 // Styles du composant
 // ...
 
+.contact-page {
+    background-image: url($contact-bg); // Image de fond pour la page
+    background-size: cover; // Couvrir toute la section avec l'image de fond
+    background-position: center center; // Centrer l'image de fond
+
+    .overlay {
+        background-color: $overlay-bg-contact; // Surcouche bleu de l'image de fond
+    }
+}
+
 // Media Queries pour le contenu de la page
 @media only screen and (min-width: 0) {
     .contact-page {

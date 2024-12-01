@@ -36,26 +36,26 @@ const Contact = () => {
     }, []);
 
     return (
-        <div className='contact-page'>
-            {/* Bannière de la page */}
-            <Banner />
-
-            <div className="page-content container py-4">
-                {/* Section d'introduction */}
-                <IntroPage
-                    title={CONSTANTS.contactPageTitle}
-                    description={CONSTANTS.contactPageSubTitle}
-                />
-
-                {/* Section du contact */}
-                <section className="contact-section container">
-                    <div className='row'>
-                        <ContactForm />
-                        <ContactDetails contactData={contactData} />
-                    </div>
-                </section>
+        <section className='contact-page'>
+            <div className="overlay z-1"></div>
+            <div className='card-group z-2 pt-4 pb-5'>
+                <div className="page-content card container d-flex justify-content-center align-items-center py-4">
+                    {/* Section d'introduction */}
+                    <IntroPage
+                        title={CONSTANTS.contactPageTitle}
+                        description={CONSTANTS.contactPageSubTitle}
+                    />
+                    {/* Section du contact */}
+                    <section className="contact-section container">
+                        <div className='row'>
+                            <ContactForm />
+                            <ContactDetails contactData={contactData} />
+                        </div>
+                    </section>
+                </div>
             </div>
-        </div>
+
+        </section>
     );
 };
 
