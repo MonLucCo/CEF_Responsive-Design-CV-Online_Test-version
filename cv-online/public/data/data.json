@@ -126,14 +126,22 @@
     },
     "legalMentions": {
         "host": {
-            "name": "Hosting Company",
-            "address": "456 Rue Hébergeur, 75002 Paris, France",
-            "email": "support@hostingcompany.com"
+            "name": "Always Data",
+            "address": {
+                "rue": "91 rue du Faubourg Saint Honoré",
+                "ville": "Paris",
+                "codePostal": "75008",
+                "pays": "France"
+            },
+            "url": "https://www.alwaysdata.com"
         },
         "credits": {
-            "development": "John Doe",
-            "design": "Jane Smith",
-            "images": "Unsplash"
+            "development": "Site développé par John Doe, étudiant du CEF",
+            "images": "Les images libres de droit sont issues du site",
+            "sources": {
+                "name": "Pixabay",
+                "url": "https://www.pixabay.com"
+            }
         }
     }
 }

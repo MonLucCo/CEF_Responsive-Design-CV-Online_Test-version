@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { loadData } from '../utils/dataLoader'; // Assure-toi que le chemin est correct
+
+// Importation des fonctions utilitaires 
+import { loadData } from '../utils/dataLoader';
 
 // Importation des styles
 import '../assets/styles/pages/LegaNotice.scss';
@@ -47,7 +49,7 @@ const LegalNotice = () => {
 
     return (
         <section className='legal-notice-page'>
-            <div className="page-content container d-flex flex-column justify-content-start align-items-start py-4">
+            <div className="page-content container d-flex flex-column justify-content-center align-items-center py-4">
                 {/* Section d'introduction */}
                 <IntroPage
                     title={CONSTANTS.legalNoticePageTitle}
@@ -71,10 +73,10 @@ const LegalNotice = () => {
                             <div id="collapseOne" className={`collapse ${openArticle === 'one' ? 'show' : ''}`}
                                 aria-labelledby="headingOne" data-bs-parent="#legalMentionsAccordion">
                                 <div className="card-body text-start">
-                                    <p>Nom de l'éditeur : {contactData.name}</p>
-                                    <p>Adresse : {`${contactData.address.rue}, ${contactData.address.codePostal} ${contactData.address.ville}, ${contactData.address.pays}`}</p>
-                                    <p>Téléphone : {contactData.phone}</p>
-                                    <p>Email : {contactData.email}</p>
+                                    <p><i className="fas fa-user me-1"></i>{contactData.name}</p>
+                                    <p><i className="fas fa-map-marker-alt me-1"></i>{`${contactData.address.rue}, ${contactData.address.codePostal} ${contactData.address.ville}, ${contactData.address.pays}`}</p>
+                                    <p><i className="fas fa-phone me-1"></i>{contactData.phone}</p>
+                                    <p><i className="fas fa-envelope me-1"></i><a href={`mailto:${contactData.email}`}>{contactData.email}</a></p>
                                 </div>
                             </div>
                         </article>
@@ -92,9 +94,12 @@ const LegalNotice = () => {
                             <div id="collapseTwo" className={`collapse ${openArticle === 'two' ? 'show' : ''}`}
                                 aria-labelledby="headingTwo" data-bs-parent="#legalMentionsAccordion">
                                 <div className="card-body text-start">
-                                    <p>Nom de l'hébergeur : {legalMentions.host.name}</p>
-                                    <p>Adresse : {legalMentions.host.address}</p>
-                                    <p>Email : {legalMentions.host.email}</p>
+                                    <p><i className="fas fa-server me-1"></i>{legalMentions.host.name}</p>
+                                    <p>
+                                        <i className="fas fa-map-marker-alt me-1"></i>
+                                        {`${legalMentions.host.address.rue}, ${legalMentions.host.address.codePostal} ${legalMentions.host.address.ville}, ${legalMentions.host.address.pays}`}
+                                    </p>
+                                    <p><i className="fas fa-globe me-1"></i><a href={legalMentions.host.url} target="_blank" rel="noopener noreferrer">{legalMentions.host.url}</a></p>
                                 </div>
                             </div>
                         </article>
@@ -112,9 +117,8 @@ const LegalNotice = () => {
                             <div id="collapseThree" className={`collapse ${openArticle === 'three' ? 'show' : ''}`}
                                 aria-labelledby="headingThree" data-bs-parent="#legalMentionsAccordion">
                                 <div className="card-body text-start">
-                                    <p>Développement : {legalMentions.credits.development}</p>
-                                    <p>Design : {legalMentions.credits.design}</p>
-                                    <p>Images : {legalMentions.credits.images}</p>
+                                    <p>{legalMentions.credits.development}</p>
+                                    <p>{legalMentions.credits.images}<a href={legalMentions.credits.sources.url} target="_blank" rel="noopener noreferrer">{legalMentions.credits.sources.name}</a></p>
                                 </div>
                             </div>
                         </article>
