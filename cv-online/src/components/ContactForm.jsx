@@ -76,7 +76,7 @@ const ContactForm = () => {
             <div className="card border-0">
                 <div className="card-body">
                     <h2 className="card-title">Formulaire de contact</h2>
-                    <hr className='separator text-primary text-opacity-100 border-3 mt-2 mb-4' />
+                    <hr className='separator text-primary opacity-100 border-3 mt-2 mb-4' />
                     <form className='form-content' onSubmit={handleSubmit}>
                         <fieldset className='fields-content d-flex flex-column gap-3'>
                             <legend className="visually-hidden">

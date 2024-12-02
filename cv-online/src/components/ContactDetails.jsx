@@ -6,7 +6,7 @@ const ContactDetails = ({ contactData }) => {
             <div className="card border-0">
                 <div className="card-body">
                     <h2 className="card-title">Mes coordonnées</h2>
-                    <hr className='separator text-primary text-opacity-100 border-3 mt-2 mb-4' />
+                    <hr className='separator text-primary opacity-100 border-3 mt-2 mb-4' />
                     <address className='address-container card-text mt-2'>
                         <p className="no-margin">
                             <i className='fas fa-map-marker-alt me-1 text-body' aria-hidden="true"></i>

@@ -7,7 +7,6 @@ import { loadData } from '../utils/dataLoader';
 import '../assets/styles/pages/Contact.scss';
 
 // Importation des composants
-import Banner from '../components/Banner';
 import IntroPage from '../components/IntroPage';
 
 // Importation des données des projets
