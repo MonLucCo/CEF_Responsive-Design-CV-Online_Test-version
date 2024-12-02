@@ -116,10 +116,32 @@
             "pays": "France"
         },
         "phone": "06 20 30 40 50",
+        "email": "john.doe@gmail.com",
         "socialLinks": {
-            "LinkedIn": "https://www.linkedin.com/in/johndoe",
+            "LinkedIn": "https://www.linkedin.com/in/johndoe123",
             "Twitter": "https://twitter.com/johndoe",
-            "Facebook": "https://www.facebook.com/johndoe"
+            "Facebook": "https://www.facebook.com/johndoe123",
+            "GitHub": "https://github.com/github-john-doe"
+        }
+    },
+    "legalMentions": {
+        "host": {
+            "name": "Always Data",
+            "address": {
+                "rue": "91 rue du Faubourg Saint Honoré",
+                "ville": "Paris",
+                "codePostal": "75008",
+                "pays": "France"
+            },
+            "url": "https://www.alwaysdata.com"
+        },
+        "credits": {
+            "development": "Site développé par John Doe, étudiant du CEF",
+            "images": "Les images libres de droit sont issues du site",
+            "sources": {
+                "name": "Pixabay",
+                "url": "https://www.pixabay.com"
+            }
         }
     }
 }

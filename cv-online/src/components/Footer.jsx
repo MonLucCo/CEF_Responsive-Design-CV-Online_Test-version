@@ -57,13 +57,13 @@ const Footer = () => {
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
                         <h5>{contactName}</h5>
                         <p>{contactRue}<br />{contactCodePostal} {contactVille}, {contactPays}<br />Téléphone : {contactPhone}</p>
-                        <a href={contactSocialLinks.LinkedIn} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
+                        <a href={contactSocialLinks.GitHub} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
                             <i className="fab fa-github"></i>
                         </a>
                         <a href={contactSocialLinks.Twitter} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
                             <i className="fab fa-twitter"></i>
                         </a>
-                        <a href={contactSocialLinks.Facebook} target="_blank" rel="noopener noreferrer nofollow">
+                        <a href={contactSocialLinks.LinkedIn} target="_blank" rel="noopener noreferrer nofollow">
                             <i className="fab fa-linkedin"></i>
                         </a>
                     </div>
