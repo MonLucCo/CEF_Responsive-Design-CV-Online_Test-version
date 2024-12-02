@@ -116,10 +116,24 @@
             "pays": "France"
         },
         "phone": "06 20 30 40 50",
+        "email": "john.doe@gmail.com",
         "socialLinks": {
             "LinkedIn": "https://www.linkedin.com/in/johndoe",
             "Twitter": "https://twitter.com/johndoe",
-            "Facebook": "https://www.facebook.com/johndoe"
+            "Facebook": "https://www.facebook.com/johndoe",
+            "GitHub": "https://github.com/johndoe"
+        }
+    },
+    "legalMentions": {
+        "host": {
+            "name": "Hosting Company",
+            "address": "456 Rue Hébergeur, 75002 Paris, France",
+            "email": "support@hostingcompany.com"
+        },
+        "credits": {
+            "development": "John Doe",
+            "design": "Jane Smith",
+            "images": "Unsplash"
         }
     }
 }

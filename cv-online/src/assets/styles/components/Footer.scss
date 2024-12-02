@@ -17,27 +17,6 @@
     }
 }
 
-// Styles pour la liste personnalisée
-.custom-list {
-    li {
-        &::before {
-            content: "> "; // Ajouter une puce avant chaque élément de la liste
-            color: $primary-color; // Utiliser la couleur primaire pour les puces
-            margin-right: 5px; // Ajouter un espacement entre la puce et le texte
-        }
-    }
-}
-
-// Styles pour les liens personnalisés
-.custom-link {
-    color: $title-color; // Utiliser la couleur des titres pour les liens
-    text-decoration: none; // Supprimer le soulignement des liens
-
-    &:hover {
-        text-decoration: underline; // Ajouter un soulignement au survol des liens
-    }
-}
-
 // Styles pour le bouton de retour en haut
 .scroll-top {
     background-color: $background-color--btn-scroll-top; // Définir la couleur de fond du bouton

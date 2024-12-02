@@ -24,6 +24,8 @@ export const CONSTANTS = {
     blogPageTitle: 'Blog',
     blogPageSubTitle: 'Découvrez ici quelques articles sur le développement web.',
     contactPageTitle: 'Me contacter',
-    contactPageSubTitle: "Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact."
+    contactPageSubTitle: "Pour me contacter en vue d'un entretien ou d'une future collaboration, merci de remplir le formulaire de contact.",
+    legalNoticePageTitle: 'Mentions légales',
+    legalNoticePageSubTitle: ''
     // Ajoutez d'autres constantes ici
 };
