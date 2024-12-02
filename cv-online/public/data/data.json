@@ -118,10 +118,10 @@
         "phone": "06 20 30 40 50",
         "email": "john.doe@gmail.com",
         "socialLinks": {
-            "LinkedIn": "https://www.linkedin.com/in/johndoe",
+            "LinkedIn": "https://www.linkedin.com/in/johndoe123",
             "Twitter": "https://twitter.com/johndoe",
-            "Facebook": "https://www.facebook.com/johndoe",
-            "GitHub": "https://github.com/johndoe"
+            "Facebook": "https://www.facebook.com/johndoe123",
+            "GitHub": "https://github.com/github-john-doe"
         }
     },
     "legalMentions": {
