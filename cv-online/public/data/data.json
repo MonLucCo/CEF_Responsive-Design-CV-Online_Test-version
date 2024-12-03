@@ -55,6 +55,14 @@
             "description": "Réalisation d'un site vitrine pour un praticien de bien-être.",
             "link": "https://example.com/espace-bien-etre/index.html",
             "tools": "en HTML/CSS"
+        },
+        {
+            "id": 4,
+            "imageUrl": "/images/projects/Project-CSB_GitHub-Profil-Viewer_John-Doe.png",
+            "title": "GitHub Profil Viewer (WS)",
+            "description": "Réalisation d'une application de visualisation du profil GitHub.",
+            "link": "https://codesandbox.io/p/github/MonLucCo/Project_GitHub-Profil-Viewer_John-Doe/main?workspaceId=42bfe3a1-1c6d-4489-8577-966828c1a1f2&embed=1",
+            "tools": "en React-CodeSandBox"
         }
     ],
     "blogPostsData": [
@@ -121,7 +129,12 @@
             "LinkedIn": "https://www.linkedin.com/in/johndoe123",
             "Twitter": "https://twitter.com/johndoe",
             "Facebook": "https://www.facebook.com/johndoe123",
-            "GitHub": "https://github.com/github-john-doe"
+            "GitHub": "https://github.com/github-john-doe",
+            "Viewer": {
+                "link": "https://vvtchz-3000.csb.app/",
+                "paramLabel": "apiUrl",
+                "paramValue": ""
+            }
         }
     },
     "legalMentions": {

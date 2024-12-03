@@ -49,6 +49,11 @@ const Footer = () => {
     // Déstructuration des données de contact avec un préfixe et valeurs par défaut 
     const { name: contactName = '', address: contactAddress = {}, phone: contactPhone = '', socialLinks: contactSocialLinks = {} } = contactData;
     const { rue: contactRue = '', codePostal: contactCodePostal = '', ville: contactVille = '', pays: contactPays = '' } = contactAddress;
+    const { Viewer } = contactSocialLinks;
+
+    // Construire dynamiquement l'URL du viewer 
+    const viewerUrl = Viewer ? `${Viewer.link}?${Viewer.paramLabel}=${encodeURIComponent(Viewer.paramValue)}` : '';
+    console.log('adresse URL calculée >> ', { viewerUrl });
 
     return (
         <footer className="footer py-3">
@@ -63,7 +68,7 @@ const Footer = () => {
                         <a href={contactSocialLinks.Twitter} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
                             <i className="fab fa-twitter"></i>
                         </a>
-                        <a href={contactSocialLinks.LinkedIn} target="_blank" rel="noopener noreferrer nofollow">
+                        <a href={contactSocialLinks.LinkedIn} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
                             <i className="fab fa-linkedin"></i>
                         </a>
                     </div>
@@ -87,6 +92,11 @@ const Footer = () => {
                                     </a>
                                 </li>
                             ))}
+                            <li>
+                                <a className="custom-link" href={viewerUrl} target="_blank" rel="noopener noreferrer">
+                                    App GitHub Profil Viewer
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
