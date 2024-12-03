@@ -17,6 +17,8 @@ const Skills = ({ skills }) => {
                             aria-valuenow={parseInt(skill.level)}
                             aria-valuemin="0"
                             aria-valuemax="100"
+                            aria-label={`${skill.name} niveau ${skill.level}`}
+                            aria-labelledby={`skill-title-${skill.id}`}
                         ></div>
                     </div>
                 </div>
