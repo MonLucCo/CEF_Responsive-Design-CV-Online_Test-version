@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# Ce fichier robots.txt donne des instructions aux robots des moteurs de recherche
+# Référentiel : https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /legal-notice  # Empêche l'indexation de la page des mentions légales
+Disallow: /public/images/  # Empêche l'indexation du répertoire des images
+Disallow: /public/data/  # Empêche l'indexation du répertoire des données
+Disallow: /static/  # Empêche l'indexation des fichiers statiques générés par le build
+Allow: /  # Permet l'indexation de toutes les autres pages
+Sitemap: https://www.example.com/sitemap.xml  # Indique l'emplacement du fichier sitemap.xml

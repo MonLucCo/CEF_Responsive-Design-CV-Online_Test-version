@@ -60,59 +60,73 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
-                        <h5>{contactName}</h5>
-                        <p>{contactRue}<br />{contactCodePostal} {contactVille}, {contactPays}<br />Téléphone : {contactPhone}</p>
-                        <a href={contactSocialLinks.GitHub} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
-                            <i className="fab fa-github"></i>
-                        </a>
-                        <a href={contactSocialLinks.Twitter} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                        <a href={contactSocialLinks.LinkedIn} target="_blank" rel="noopener noreferrer nofollow" className="me-2">
-                            <i className="fab fa-linkedin"></i>
-                        </a>
+                        <div className="card-body">
+                            <p className="footer-title fs-4" aria-label='Contact Information : John Doe'><strong>{contactName}</strong></p>
+                            <p className="card-text">{contactRue}<br />{contactCodePostal} {contactVille}, {contactPays}<br />Téléphone : {contactPhone}</p>
+                            <a href={contactSocialLinks.GitHub} target="_blank" rel="noopener noreferrer nofollow"
+                                className="me-2 custom-link" aria-label={`GitHub de ${contactName}`}>
+                                <i className="fab fa-github"></i>
+                            </a>
+                            <a href={contactSocialLinks.Twitter} target="_blank" rel="noopener noreferrer nofollow"
+                                className="me-2 custom-link" aria-label={`Twitter de ${contactName}`}>
+                                <i className="fab fa-twitter"></i>
+                            </a>
+                            <a href={contactSocialLinks.LinkedIn} target="_blank" rel="noopener noreferrer nofollow"
+                                className="me-2 custom-link" aria-label={`LinkedIn de ${contactName}`}>
+                                <i className="fab fa-linkedin"></i>
+                            </a>
+                        </div>
                     </div>
+
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
-                        <h5>Liens utiles</h5>
-                        <ul className="list-unstyled custom-list">
-                            <li><Link to="/" className="custom-link">Accueil</Link></li>
-                            <li><a href="/#about" onClick={handleAboutClick} className="custom-link">À propos</a></li>
-                            <li><Link to="/services" className="custom-link">Services</Link></li>
-                            <li><Link to="/contact" className="custom-link">Me contacter</Link></li>
-                            <li><Link to="/legal-notice" className="custom-link">Mentions légales</Link></li>
-                        </ul>
+                        <div className="card-body">
+                            <p className="footer-title fs-4" aria-label='Liens utiles'><strong>Liens utiles</strong></p>
+                            <ul className="list-unstyled custom-list">
+                                <li><Link to="/" className="custom-link">Accueil</Link></li>
+                                <li><a href="/#about" onClick={handleAboutClick} className="custom-link">À propos</a></li>
+                                <li><Link to="/services" className="custom-link">Services</Link></li>
+                                <li><Link to="/contact" className="custom-link">Me contacter</Link></li>
+                                <li><Link to="/legal-notice" className="custom-link">Mentions légales</Link></li>
+                            </ul>
+                        </div>
                     </div>
+
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
-                        <h5>Mes dernières réalisations</h5>
-                        <ul className="list-unstyled custom-list">
-                            {projectsData.map((project, index) => (
-                                <li key={index}>
-                                    <a className="custom-link" href={project.link} target="_blank" rel="noopener noreferrer">
-                                        {project.title}
+                        <div className="card-body">
+                            <p className="footer-title fs-4" aria-label='Mes dernières réalisations'><strong>Mes dernières réalisations</strong></p>
+                            <ul className="list-unstyled custom-list">
+                                {projectsData.map((project, index) => (
+                                    <li key={index}>
+                                        <a className="custom-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                                            {project.title}
+                                        </a>
+                                    </li>
+                                ))}
+                                <li>
+                                    <a className="custom-link" href={viewerUrl} target="_blank" rel="noopener noreferrer">
+                                        App GitHub Profil Viewer
                                     </a>
                                 </li>
-                            ))}
-                            <li>
-                                <a className="custom-link" href={viewerUrl} target="_blank" rel="noopener noreferrer">
-                                    App GitHub Profil Viewer
-                                </a>
-                            </li>
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
+
                     <div className="col-12 col-md-6 col-lg-3 pt-2">
-                        <h5>Mes derniers articles</h5>
-                        <ul className="list-unstyled custom-list">
-                            {recentPosts.map(post => (
-                                <li key={post.id}>
-                                    <a className="custom-link"
-                                        href={post.linkPost}  // Pour résoudre un Warning => lien non utilisé ! autre possibilité : utiliser un bouton stylisé (ci-après)
-                                        onClick={(event) => handleLinkClick(event, post.title, post.linkPost)}
-                                        target="_blank" rel="noopener noreferrer">
-                                        {post.title}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="card-body">
+                            <p className="footer-title fs-4" aria-label='Mes derniers articles'><strong>Mes derniers articles</strong></p>
+                            <ul className="list-unstyled custom-list">
+                                {recentPosts.map(post => (
+                                    <li key={post.id}>
+                                        <a className="custom-link"
+                                            href={post.linkPost}
+                                            onClick={(event) => handleLinkClick(event, post.title, post.linkPost)}
+                                            target="_blank" rel="noopener noreferrer">
+                                            {post.title}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,6 +137,7 @@ const Footer = () => {
                 </button>
             </div>
         </footer>
+
     );
 };
 
