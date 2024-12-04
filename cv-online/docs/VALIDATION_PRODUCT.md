@@ -1,5 +1,17 @@
 # Validation du site web
 
+## Sommaire
+
+- [Validation du site web](#validation-du-site-web)
+  - [Sommaire](#sommaire)
+  - [Validation W3C](#validation-w3c)
+    - [Validation HTML](#validation-html)
+    - [Validation CSS](#validation-css)
+  - [Validation Lighthouse](#validation-lighthouse)
+    - [Rapports complets](#rapports-complets)
+    - [Résultats Lighthouse](#résultats-lighthouse)
+  - [Navigation dans la documentation](#navigation-dans-la-documentation)
+
 ## Validation W3C
 
 ### Validation HTML
@@ -12,40 +24,25 @@
 
 ## Validation Lighthouse
 
-1. desktop
-  ![Validation desktop](./images/ligthouse-synthese-desktop.png)
-   - [Rapport Ligthouse Desktop](./reports/rapport-ligthouse_cv-online_desktop.pdf)
+### Rapports complets
 
-1. mobile
-  ![Validation mobile](./images/ligthouse-synthese-mobile.png)
-   - [Rapport Ligthouse Mobile](./reports/rapport-ligthouse_cv-online_mobile.pdf)
+- [Rapport Lighthouse Mobile](./reports/rapport-ligthouse_cv-online_mobile.pdf)
+- [Rapport Lighthouse Desktop](./reports/rapport-ligthouse_cv-online_desktop.pdf)
 
-### Performance
+### Résultats Lighthouse
 
-1. desktop
-   - ![Performance](./images/ligthouse-synthese-desktop_performances.png)
-2. mobile
-   - ![Performance](./images/ligthouse-synthese-mobile_performances.png)
+| **Critère**       | **Desktop** | **Mobile** |
+|-------------------|-------------|------------|
+| **Synthèse**      | ![Desktop](./images/ligthouse-synthese-desktop.png) | ![Mobile](./images/ligthouse-synthese-mobile.png) |
+| **Performance**   | ![Performance Desktop](./images/ligthouse-synthese-desktop_performances.png) | ![Performance Mobile](./images/ligthouse-synthese-mobile_performances.png) |
+| **Accessibilité** | ![Accessibilité Desktop](./images/ligthouse-synthese-desktop_accessibilite.png) | ![Accessibilité Mobile](./images/ligthouse-synthese-mobile_accessibilite.png) |
+| **Bonnes pratiques** | ![Bonnes pratiques Desktop](./images/ligthouse-synthese-desktop_bonnes-pratiques.png) | ![Bonnes pratiques Mobile](./images/ligthouse-synthese-mobile_bonnes-pratiques.png) |
+| **SEO**           | ![SEO Desktop](./images/ligthouse-synthese-desktop_seo.png) | ![SEO Mobile](./images/ligthouse-synthese-mobile_seo.png) |
 
-### Accessibilité
+## Navigation dans la documentation
 
-1. desktop
-   - ![Accessibilité](./images/ligthouse-synthese-desktop_accessibilite.png)
-2. mobile
-   - ![Accessibilité](./images/ligthouse-synthese-mobile_accessibilite.png)
+Pour plus d'informations sur le projet, vous pouvez consulter les documents suivants :
 
-### Bonnes pratiques
-
-1. desktop
-   - ![Bonnes pratiques](./images/ligthouse-synthese-desktop_bonnes-pratiques.png)
-2. mobile
-   - ![Bonnes pratiques](./images/ligthouse-synthese-mobile_bonnes-pratiques.png)
-
-### SEO
-
-1. desktop
-   - ![SEO](./images/ligthouse-synthese-desktop_seo.png)
-2. mobile
-   - ![SEO](./images/ligthouse-synthese-mobile_seo.png)
-
-[Retour au README du projet](./README_Project.md)
+- [README du repository GitHub](../../README.md) : Vue d'ensemble du projet, instructions d'installation et d'utilisation, méthodes de développement.
+- [README du projet CV Online](./README_Project.md) : Détails sur l'architecture, les fonctionnalités, les instructions d'utilisation, les dépendances, la configuration, les tests et le déploiement de l'application CV Online.
+- [Preuves de validation](./VALIDATION_PRODUCT.md) : Résultats des validations W3C et Lighthouse.

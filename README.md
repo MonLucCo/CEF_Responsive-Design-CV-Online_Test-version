@@ -14,19 +14,12 @@
   - [Méthode de Développement](#méthode-de-développement)
     - [Utilisation de GitHub](#utilisation-de-github)
     - [Environnements utilisés](#environnements-utilisés)
+  - [Détails du projet **CV Online**](#détails-du-projet-cv-online)
+  - [Navigation dans la documentation](#navigation-dans-la-documentation)
 
 ## Description
 
 Le projet concerne le site d'un CV en ligne réalisé avec la librairie `React.js` et déployé chez un hébergeur.
-
-Le projet consiste à réaliser :
-
-- l'installaton de l'environnement de développement
-- le développement du code du site
-- la validation W3C et l'évaluation des performances du code
-- l'installation du site produit chez un hébergeur.
-
-Le détail du projet est décrit dans le documentation [README de CV-online](./cv-online/docs/README_Project.md)
 
 ## Installation
 
@@ -55,7 +48,6 @@ Le détail du projet est décrit dans le documentation [README de CV-online](./c
 1. Se positionner dans le dossier de l'application : `cd cv-online`
 2. Pour créer l'application à déployer (dans le dossier `/build`) : `npm run build`
 3. Démarrez le serveur de production en local :
-
    - installez le serveur : `npm install -g serve`
    - démarrez le serveur de production : `serve -s build`
 4. Pour simuler l'application de production, ouvrez votre navigateur en localhost au port indiqué
@@ -77,12 +69,22 @@ Le détail du projet est décrit dans le documentation [README de CV-online](./c
 
 1. Environnement de codage VSCode
 2. Environnement d'hébergement :
-
    - Compte `CodeSandbox.io` pour l'hébergemet d'une application React externe
    - Compte `AlwaysData.com` pour l'hébergement du site d'application
    - Compte `GitHub.com` pour l'historisation des travaux
-3. Environnement de tests
-
+3. Environnement de tests :
    - Outil DevTools `Ligthouse` de `Chrome`
    - Outil [W3C Validator HTML](https://validator.w3.org/) de `W3C`
    - Outil [W3C Validator CSS](https://validator.w3.org/) de `W3C`
+
+## Détails du projet **CV Online**
+
+Le détail du projet est décrit dans la documentation [README de CV-online](./cv-online/docs/README_Project.md).
+
+## Navigation dans la documentation
+
+Pour plus d'informations sur le projet, vous pouvez consulter les documents suivants :
+
+- [README du repository GitHub](./README.md) : Vue d'ensemble du projet, instructions d'installation et d'utilisation, méthodes de développement.
+- [README du projet CV Online](./cv-online/docs/README_Project.md) : Détails sur l'architecture, les fonctionnalités, les instructions d'utilisation, les dépendances, la configuration, les tests et le déploiement de l'application CV Online.
+- [Preuves de validation](./cv-online/docs/VALIDATION_PRODUCT.md) : Résultats des validations `W3C` et `Lighthouse`.
