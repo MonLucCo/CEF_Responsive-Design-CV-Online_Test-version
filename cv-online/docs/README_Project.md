@@ -13,6 +13,7 @@
   - [Configuration](#configuration)
   - [Tests](#tests)
   - [Déploiement](#déploiement)
+  - [Preuves de validité du projet](#preuves-de-validité-du-projet)
   - [FAQ](#faq)
     - [Comment puis-je contribuer au projet ?](#comment-puis-je-contribuer-au-projet-)
     - [Où puis-je signaler des problèmes ?](#où-puis-je-signaler-des-problèmes-)
@@ -23,6 +24,7 @@
 - `src/` : Contient le code source de l'application
 - `public/` : Contient les fichiers publics comme `index.html` et les icônes
 - `node_modules/` : Contient les dépendances du projet
+- `build/` : Contient le code du site hébergé
 
 ## Fonctionnalités
 
@@ -56,6 +58,10 @@
 
 1. Construisez l'application pour la production avec `npm run build`.
 2. Déployez les fichiers générés dans le dossier `build` sur votre serveur ou plateforme de cloud.
+
+## Preuves de validité du projet
+
+Vous pouvez consulter les preuves de validation du projet selon les références du `W3C` C et l'outil `Ligthouse` dans le document [Preuves W3C Ligthouse](./VALIDATION_PRODUCT.md).
 
 ## FAQ
 
