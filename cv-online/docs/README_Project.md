@@ -16,7 +16,14 @@
 ## Architecture
 
 - `src/` : Contient le code source de l'application
-- `public/` : Contient les fichiers publics comme `index.html` et les icônes
+  - `assets/styles/` : contient les dossiers des styles (fichier SCSS) segmentés par nature
+  - `config/` : contient la configuration de l'application
+  - `pages/` : contient les composants de page de l'application
+  - `components/` : contient les composants de rendu de l'application
+  - `utils/` : contient les composants utilitaires de l'application
+- `public/` : Contient les fichiers publics comme `index.html` et les icônes et les dossiers suivants :
+  - `data/` : contient toutes les données chargées de manière asynchrone
+  - `images/`: contient les fichiers d'image segmentés par composant
 - `node_modules/` : Contient les dépendances du projet
 - `build/` : Contient le code du site hébergé
 
@@ -24,19 +31,27 @@
 
 - Affichage du CV en ligne
 - Formulaire de contact
-- Blog avec articles
+- Réalisations avec accès aux projets du CV
+- Blog avec articles publiés
+- Page des mentions légales intégrée à l'application du CV
+- Accès à l'application externe **GitHub Profile Viewer** hébergée sur CodeSandbox
 
 ## Instructions d'utilisation
 
 1. Accédez à la page d'accueil pour voir le CV
 2. Utilisez le formulaire de contact pour envoyer un message
-3. Consultez le blog pour lire les articles
+3. Consulter les réalisations pour accéder aux projets réalisées (simulation de l'accès lorsque l'adresse n'est pas connue)
+4. Consultez le blog pour lire les articles (simulation de l'accès car pas d'adresse connue pour les publications)
+5. Consulter la page des services proposés
+6. Accéder à l'application externe **GitHub Profile Viewer** pour visualiser les informations du profil du candidat du CV (ou autre profil défini par une adresse url valide de l'API GitHub)
 
 ## Dépendances
 
 - React
 - React Router
 - Sass
+- Bootstrap 5.3.3 (installé via CDN)
+- Font Awesome 6 (installé via CDN)
 
 ## Configuration
 
