@@ -1,32 +1,29 @@
 # CEF_Responsive-Design-CV-Online_Test-version
 
-[Lire en Anglais](./cv-online/docs/README_EN.md)
-
 ## Sommaire
 
 - [CEF\_Responsive-Design-CV-Online\_Test-version](#cef_responsive-design-cv-online_test-version)
   - [Sommaire](#sommaire)
   - [Description](#description)
   - [Installation](#installation)
+    - [Installation de l'environnement de développement](#installation-de-lenvironnement-de-développement)
     - [Installation de React, React Router et Sass](#installation-de-react-react-router-et-sass)
   - [Utilisation](#utilisation)
-  - [Contribuer](#contribuer)
-    - [Charte de Contribution](#charte-de-contribution)
-      - [Code de Conduite](#code-de-conduite)
-      - [Comment Contribuer](#comment-contribuer)
-      - [Style de Code](#style-de-code)
-      - [Tests](#tests)
-      - [Revue de Code](#revue-de-code)
-      - [Documentation](#documentation)
-  - [Licence](#licence)
-  - [Auteurs](#auteurs)
-  - [Remerciements](#remerciements)
+    - [Serveur de développement](#serveur-de-développement)
+    - [Serveur de production](#serveur-de-production)
+  - [Méthode de Développement](#méthode-de-développement)
+    - [Utilisation de GitHub](#utilisation-de-github)
+    - [Environnements utilisés](#environnements-utilisés)
+  - [Détails du projet **CV Online**](#détails-du-projet-cv-online)
+  - [Navigation dans la documentation](#navigation-dans-la-documentation)
 
 ## Description
 
-Un projet de CV en ligne.
+Le projet concerne le site d'un CV en ligne réalisé avec la librairie `React.js` et déployé chez un hébergeur.
 
 ## Installation
+
+### Installation de l'environnement de développement
 
 1. Clonez le repository : `git clone https://github.com/votre-utilisateur/cv-online.git`
 2. Accédez au répertoire du projet : `cd cv-online`
@@ -40,67 +37,54 @@ Un projet de CV en ligne.
 
 ## Utilisation
 
-1. Démarrez le serveur de développement : `npm start`
-2. Ouvrez votre navigateur à `http://localhost:3000`
+### Serveur de développement
 
-## Contribuer
+1. Se positionner dans le dossier de l'application : `cd cv-online`
+2. Démarrez le serveur de développement en local : `npm start`
+3. Pour simuler l'application de développement, ouvrez votre navigateur à `http://localhost:3000`
 
-1. Forkez le repository
-2. Créez une branche pour votre fonctionnalité : `git checkout -b ma-fonctionnalite`
-3. Faites vos modifications et committez : `git commit -m 'Ajout de ma fonctionnalité'`
-4. Poussez votre branche : `git push origin ma-fonctionnalite`
-5. Créez une Pull Request
+### Serveur de production
 
-### Charte de Contribution
+1. Se positionner dans le dossier de l'application : `cd cv-online`
+2. Pour créer l'application à déployer (dans le dossier `/build`) : `npm run build`
+3. Démarrez le serveur de production en local :
+   - installez le serveur : `npm install -g serve`
+   - démarrez le serveur de production : `serve -s build`
+4. Pour simuler l'application de production, ouvrez votre navigateur en localhost au port indiqué
 
-Nous apprécions votre intérêt pour contribuer à ce projet ! Pour garantir une collaboration harmonieuse et efficace, veuillez suivre les directives ci-dessous :
+## Méthode de Développement
 
-#### Code de Conduite
+### Utilisation de GitHub
 
-Veuillez lire et respecter notre [Code de Conduite](./cv-online/docs/CODE_OF_CONDUCT.md) pour assurer un environnement respectueux et inclusif pour tous les contributeurs.
-
-#### Comment Contribuer
-
-1. **Forkez le repository** : Cliquez sur le bouton "Fork" en haut de la page du repository.
-2. **Clonez votre fork** : Clonez votre fork localement avec `git clone https://github.com/votre-utilisateur/cv-online.git`.
+1. **Forker le repository** : Cliquez sur le bouton "Fork" en haut de la page du repository.
+2. **Clonez le fork** : Clonez votre fork localement avec `git clone https://github.com/votre-utilisateur/cv-online.git`.
 3. **Créez une branche** : Créez une nouvelle branche pour votre fonctionnalité ou correction de bug avec `git checkout -b ma-fonctionnalite`.
-4. **Faites vos modifications** : Apportez vos modifications dans votre branche.
-5. **Testez vos modifications** : Assurez-vous que toutes les modifications sont correctement testées.
-6. **Commitez vos modifications** : Commitez vos modifications avec un message de commit clair et descriptif avec `git commit -m 'Ajout de ma fonctionnalité'`.
-7. **Poussez votre branche** : Poussez votre branche vers votre fork avec `git push origin ma-fonctionnalite`.
+4. **Faites les modifications** : Apportez vos modifications dans votre branche.
+5. **Testez les modifications** : Assurez-vous que toutes les modifications sont correctement testées.
+6. **Commitez les modifications** : Commitez vos modifications avec un message de commit clair et descriptif avec `git commit -m 'Ajout de ma fonctionnalité'`.
+7. **Poussez la branche** : Poussez votre branche vers votre fork avec `git push origin ma-fonctionnalite`.
 8. **Créez une Pull Request** : Allez sur la page du repository original et créez une Pull Request à partir de votre branche.
 
-#### Style de Code
+### Environnements utilisés
 
-- Utilisez des noms de variables et de fonctions clairs et descriptifs.
-- Suivez les conventions de style de code du projet.
-- Assurez-vous que votre code est bien commenté.
+1. Environnement de codage VSCode
+2. Environnement d'hébergement :
+   - Compte `CodeSandbox.io` pour l'hébergemet d'une application React externe
+   - Compte `AlwaysData.com` pour l'hébergement du site d'application
+   - Compte `GitHub.com` pour l'historisation des travaux
+3. Environnement de tests :
+   - Outil DevTools `Ligthouse` de `Chrome`
+   - Outil [W3C Validator HTML](https://validator.w3.org/) de `W3C`
+   - Outil [W3C Validator CSS](https://validator.w3.org/) de `W3C`
 
-#### Tests
+## Détails du projet **CV Online**
 
-- Ajoutez des tests unitaires pour toute nouvelle fonctionnalité.
-- Assurez-vous que tous les tests existants passent avant de soumettre votre Pull Request.
+Le détail du projet est décrit dans la documentation [README de CV-online](./cv-online/docs/README_Project.md).
 
-#### Revue de Code
+## Navigation dans la documentation
 
-- Toutes les Pull Requests seront examinées par un mainteneur du projet.
-- Soyez prêt à répondre aux commentaires et à apporter des modifications si nécessaire.
+Pour plus d'informations sur le projet, vous pouvez consulter les documents suivants :
 
-#### Documentation
-
-- Mettez à jour la documentation pour refléter les modifications apportées.
-- Ajoutez des commentaires dans le code pour expliquer les parties complexes ou importantes.
-
-Merci de contribuer à ce projet ! Votre aide est précieuse pour améliorer et faire évoluer ce projet.
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-## Auteurs
-
-- **John Doe** - *Développeur principal* - [john-doe](https://github.com/john-doe)
-
-## Remerciements
-
-Merci à tous ceux qui ont contribué à ce projet.
+- [README du repository GitHub](./README.md) : Vue d'ensemble du projet, instructions d'installation et d'utilisation, méthodes de développement.
+- [README du projet CV Online](./cv-online/docs/README_Project.md) : Détails sur l'architecture, les fonctionnalités, les instructions d'utilisation, les dépendances, la configuration, les tests et le déploiement de l'application CV Online.
+- [Preuves de validation](./cv-online/docs/VALIDATION_PRODUCT.md) : Résultats des validations `W3C` et `Lighthouse`.
