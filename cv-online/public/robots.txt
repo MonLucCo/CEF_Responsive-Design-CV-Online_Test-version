@@ -6,4 +6,4 @@ Disallow: /public/images/  # Empêche l'indexation du répertoire des images
 Disallow: /public/data/  # Empêche l'indexation du répertoire des données
 Disallow: /static/  # Empêche l'indexation des fichiers statiques générés par le build
 Allow: /  # Permet l'indexation de toutes les autres pages
-Sitemap: https://www.perlucco.alwaysdata.net/sitemap.xml  # Indique l'emplacement du fichier sitemap.xml
+Sitemap: https://perlucco.alwaysdata.net/sitemap.xml  # Indique l'emplacement du fichier sitemap.xml
