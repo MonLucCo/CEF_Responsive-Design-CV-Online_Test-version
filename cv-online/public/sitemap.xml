@@ -2,31 +2,31 @@
 <!-- Remplacer https://www.example.com par l'adresse réelle de l'hébergement -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.example.com/</loc>
+        <loc>https://www.perlucco.alwaysdata.net/</loc>
         <lastmod>2024-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.example.com/services</loc>
+        <loc>https://www.perlucco.alwaysdata.net/services</loc>
         <lastmod>2024-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.example.com/projects</loc>
+        <loc>https://www.perlucco.alwaysdata.net/projects</loc>
         <lastmod>2024-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.example.com/blog</loc>
+        <loc>https://www.perlucco.alwaysdata.net/blog</loc>
         <lastmod>2024-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.example.com/contact</loc>
+        <loc>https://www.perlucco.alwaysdata.net/contact</loc>
         <lastmod>2024-12-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
