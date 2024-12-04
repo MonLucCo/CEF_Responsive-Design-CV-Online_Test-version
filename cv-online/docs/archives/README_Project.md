@@ -1,5 +1,7 @@
 # cv-online
 
+[Lire en Anglais](README_EN_Project.md)
+
 ## Sommaire
 
 - [cv-online](#cv-online)
